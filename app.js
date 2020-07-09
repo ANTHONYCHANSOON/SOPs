@@ -15,6 +15,10 @@ app.use(express.static(__dirname + "/public"));
 mongoose.connect("mongodb://localhost:27017/SOPsDB", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 // mongoose.connect("mongodb+srv://admin-anthony:Test123@cluster0-jxcje.mongodb.net/mPlanDB", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
+app.get("/", (req,res)=> {
+    res.render("home");
+})
+
 
 let port = process.env.PORT;
 if(port == null || port == "") {
