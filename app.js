@@ -82,7 +82,12 @@ app.get("/dashboard", function (req, res) {
 
 app.post("/registerNewUser", function (req, res) {
     console.log(req.body);
-    User.register({ username: req.body.username, firstName: req.body.fname, lastName: req.body.lname, superUser: req.body.superUser }, req.body.password, function (err, user) {
+    User.register({
+        username: req.body.username,
+        firstName: req.body.fname,
+        lastName: req.body.lname,
+        superUser: req.body.superUser
+    }, req.body.password, function (err, user) {
         if (err) {
             console.log(err)
         } else {
@@ -105,7 +110,7 @@ app.post("/login", function (req, res) {
         } else {
             passport.authenticate("local")(req, res, function () {
                 res.render("dashboard", {
-                    userinfo : req.user
+                    userinfo: req.user
                 })
             })
         }
