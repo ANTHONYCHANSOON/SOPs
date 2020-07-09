@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<h1>login page</h1>
+
+<form action="/login" method="post">
+
+    <label for="Username">Username: </label>
+    <input type="text" name="username" autocomplete=off>
+
+    <label for="password">Password: </label>
+    <input type="password" name="password" autocomplete=off>
+
+    <button type="submit">Login</button>
+
+</form>
+
+<%- include("partials/footer") -%>

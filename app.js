@@ -17,6 +17,10 @@ mongoose.connect("mongodb://localhost:27017/SOPsDB", { useNewUrlParser: true, us
 
 app.get("/", (req,res)=> {
     res.render("home");
+});
+
+app.get("/login", (req,res)=> {
+    res.render("login");
 })
 
 
