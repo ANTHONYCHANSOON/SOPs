@@ -81,20 +81,20 @@ app.get("/dashboard", function (req, res) {
 })
 
 app.post("/registerNewUser", function (req, res) {
-    console.log("line 84 " + req.body);
+    console.log(req.body);
+    console.log(req.user);
     User.register({
         username: req.body.username,
         firstName: req.body.fname,
         lastName: req.body.lname,
         superUser: req.body.superUser
     }, req.body.password, function (err, user) {
-        //console.log("line 91 " + user);
         if (err) {
             console.log(err)
         } else {
 
             res.render("dashboard", {
-                userinfo : req.user
+                userinfo: req.user
             })
             // passport.authenticate("local")(req, res, function () {
             //     res.render("dashboard", {
