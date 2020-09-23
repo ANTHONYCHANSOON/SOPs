@@ -105,6 +105,7 @@ app.post("/registerNewUser", function (req, res) {
             //zzzzz
             //commit
             //commiting
+            //asdfasdf
         }
     })
 });
