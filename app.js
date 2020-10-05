@@ -107,6 +107,7 @@ app.post("/registerNewUser", function (req, res) {
             //commiting
             //asdfasdf
             //render here
+            //fix app.js
         }
     })
 });
