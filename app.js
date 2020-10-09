@@ -101,13 +101,7 @@ app.post("/registerNewUser", function (req, res) {
             //         userinfo: req.user
             //     });
             // })
-            //asdfasdf
-            //zzzzz
-            //commit
-            //commiting
-            //asdfasdf
-            //render here
-            //fix app.js
+            //asf
         }
     })
 });
